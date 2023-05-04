@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta name="author" author="samswag" />
+		<title>SM Home</title>
+		<link rel="stylesheet" href="style.css" />
+		<script>
+			function formatTime(str) {
+				return str.toString().padStart(2, '0')
+			}
+		</script>
+		<link
+			rel="shortcut icon"
+			href="resources/favicon.ico"
+			type="image/x-icon"
+		/>
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<div class="meta">
+			<div class="money">
+				<img src="resources/money.png" alt="" class="money--img" />
+				<span class="amount">$100,000,000</span>
+			</div>
+			<div class="msg">
+				<img src="resources/msg.png" alt="" class="msg--img" />
+				<span class="msg-no">0</span>
+			</div>
+			<div class="time">
+				<img src="resources/time.png" alt="" class="time--img" />
+				<span class="cur-time">
+					<script>
+						let date = new Date();
+						let curTime = `${formatTime(
+							date.getHours()
+						)}:${formatTime(date.getMinutes())}`;
+						document.write(curTime);
+					</script>
+				</span>
+			</div>
+		</div>
+
+		<div class="home__section">
+			<a href="#" class="home">
+				<img src="resources/home_icon.png" alt="" />
+			</a>
+			<span class="home__text">Home</span>
+		</div>
+
+		<nav class="nav">
+			<ul>
+				<li>Team</li>
+				<li>Messages</li>
+				<li>Last Game</li>
+				<li>Next Match</li>
+			</ul>
+		</nav>
+
+		<div class="main">
+			<div class="main__container">
+				<a href="javascript:increaseMsg()">
+					<img class="home__img" src="resources/home.png" />
+					<span class="home__text">Home</span>
+				</a>
+			</div>
+			<div class="main__container">
+				<a href="javascript:decreaseMsg()">
+					<img class="home__img" src="resources/competition.png" />
+					<span class="home__text">Competiton</span>
+				</a>
+			</div>
+			<div class="main__container">
+				<a href="#">
+					<img class="home__img" src="resources/signings.png" />
+					<span class="home__text">Signings</span>
+				</a>
+			</div>
+			<div class="main__container">
+				<a href="#">
+					<img class="home__img" src="resources/coach.png" />
+					<span class="home__text">Coach</span>
+				</a>
+			</div>
+			<div class="main__container">
+				<a href="#">
+					<img class="home__img" src="resources/club.png" />
+					<span class="home__text">Club</span>
+				</a>
+			</div>
+			<div class="main__container">
+				<a href="#">
+					<img class="home__img" src="resources/community.png" />
+					<span class="home__text">Community</span>
+				</a>
+			</div>
+			<div class="main__container">
+				<a href="#">
+					<img class="home__img" src="resources/gold_ball.png" />
+					<span class="home__text">Golden Balls</span>
+				</a>
+			</div>
+			<div class="main__container">
+				<a href="#">
+					<img class="home__img" src="resources/gold_ball.png" />
+					<span class="home__text">Pack Manager</span>
+				</a>
+			</div>
+		</div>
+		
+		<footer></footer>
+	</body>
+</html>
